@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Lying in Bed Calculator</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+
+    <div class="container content">
+        <div class="header">
+            <h1>Lying in Bed Calculator</h1>
+            <p>Find out how much time you're wasting in the morning.</p>
+        </div>
+        <p>
+            How old are you?
+            <input type="number" id="yearsold" min="0" max="150" value="20"> years old
+        </p>
+
+        <p>
+            On average, how many minutes do you spend lying in bed in the morning after you've woken up?
+            <input type="number" id="dailyminutes" min="0" max="480"> minutes
+        </p>
+
+        <p id="results">
+            Since you were ten, you have spent <span class="time" id="haveSpent"></span> lying in bed in the morning. At your current rate, you will spend <span class="time" id="willSpend"></span> lying, adding up to a total of <span class="time" id="total"></span> of your life spent lying in bed.
+        </p>
+
+        <p id="savetime">
+            If you spend <input type="number" id="minutesless" min="0" max="480" value=""> minutes less in bed, you will save <span class="time" id="timeSaved"></span> of the rest of your life.
+        </p>
+
+        <div class="notes">
+            <p>By <a href="http://ebelinski.com">Eugene Belinski</a>. Idea from <a href="https://itunes.apple.com/us/podcast/old-school/id908438162?mt=2">Old School</a>. Calculations are based on a life expectacy of 85 years, and do not count any time spent in bed before the age of 10. 
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
